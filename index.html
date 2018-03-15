@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D爱心</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id="heart3D">
+		<div id="cube">
+			<div><img src="img/1.jpg"></div>
+			<div><img src="img/2.jpg"></div>
+			<div><img src="img/3.jpg"></div>
+			<div><img src="img/1.jpg"></div>
+			<div><img src="img/2.jpg"></div>
+			<div><img src="img/3.jpg"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var heart3D = document.getElementById('heart3D');
+	for(var i = 0;i < 36; i++){
+		var odiv = document.createElement("div");
+		odiv.className = "heart"
+		odiv.style.transform = "rotateY("+i*10+"deg)rotateZ(45deg)translateX(30px)";
+		heart3D.appendChild(odiv);
+	}
+	</script>
+</body>
+</html>

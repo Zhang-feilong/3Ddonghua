@@ -1,0 +1,88 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	perspective: 1000px;
+	background: #000;
+}
+#cube {
+	width: 50px;
+	height: 50px;
+	margin: 300px auto;
+	position: relative;
+	transform-style: preserve-3d;
+	transform:translateY(50px)translateZ(25px);
+	
+}
+
+#cube div {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0;
+	top: 0;
+}
+#cube div img {
+	width: 50px;
+	height: 50px;
+}
+
+#cube div:nth-child(1){
+	top: -50px;
+	transform-origin: bottom;
+	transform: rotateX(90deg);
+}
+#cube div:nth-child(2){
+	top: 50px;
+	transform-origin: top;
+	transform: rotateX(-90deg);
+}
+#cube div:nth-child(3){
+	left:-50px;
+	transform-origin: right;
+	transform: rotateY(-90deg);
+}
+
+
+#cube div:nth-child(4){
+	left: 50px;
+	transform-origin: left;
+	transform: rotateY(90deg);
+}
+
+
+#cube div:nth-child(6){
+	transform: translateZ(-50px);
+}
+
+#cube:hover {
+	transform:rotateY(360deg);
+}
+
+#heart3D {
+	width: 100px;
+	height:160px;
+	margin: 200px auto;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: xuanzhuan 10s linear infinite;
+}
+
+@keyframes xuanzhuan{
+	from{transform: rotateY(0deg)rotateX(0deg)}
+	to{transform: rotateY(360deg)rotateX(360deg);}
+
+}
+
+#heart3D .heart {
+	width: 100px;
+	height: 160px;
+	border: 1px solid red;
+	border-left: 0;
+	border-bottom: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50% 50% 0/40% 50% 0;
+}
